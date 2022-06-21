@@ -1,14 +1,25 @@
 # minnowTraits
+
+## 1- Introduction
+
 Using trait segmentation to understand minnow trait evolution across an ecological gradient.
 
-## Minnow image selection
-Images were previously segmented using machine learning (<a href="https://github.com/hdr-bgnn/BGNN-trait-segmentation">BGNN trait segementation</a>).
+The objective of the project is:
+    1. Select a smaller subet of fish (6300) corresponding to minnows family and metadata criteria
+    2. Analyse the selected dataset using Snakemake workflows to:
+        + Segment the traits of the fish
+        + Extract the morphological traits
+        + Analyse the result (to be describe)
+        
+         
 
-### Selection of images to run through the workflow
+## 2- Minnow image selection
+Images were previously segmented using Deep learning algorithm (<a href="https://github.com/hdr-bgnn/BGNN-trait-segmentation">BGNN trait segementation</a>).
+
+### 1- Selection of images subset to analyse with the [workflow](https://github.com/hdr-bgnn/BGNN_Snakemake)
 
 **This section describes the creation of minnow.filtered.from.imagequalitymetadata_7Jun2022.csv using minnowSelectionImageQualityMetadata.R**
-
-R code (Minnows.R) was used to filter out high quality, minnow images using the Image_Quality_Metadata_v1_202111206_151204.csv matching the following criteria:
+We use the R code ([Minnows.R](https://github.com/hdr-bgnn/minnowTraits/blob/main/Scripts/minnowSelectionImageQualityMetadata.R)) to filter out high quality, minnow images using the Image_Quality_Metadata_v1_202111206_151204.csv. matching the following criteria:
 
 List of criteria chosen :
 
@@ -39,8 +50,9 @@ The resulting dataset was then merged with the Image_Metadata_v1_20211206_151152
 
 **This section describes the selection criteria used to select which segmented images to analyze, and the creation of X.csv using minnowSelectionImageQualityMetadata.R code.**
 
-### Analyses on segmented images
+### 2- Morphological analyses on segmented images
 
+Once the segmented images are produce
 **This section describes the analyses used on the X.csv file using X.R code. Results and figures from these analyses are in the folder "Results".**
 
 ## Minnow trait selection
